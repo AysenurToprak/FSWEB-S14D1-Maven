@@ -13,6 +13,7 @@ import java.lang.reflect.Field;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @ExtendWith(ResultAnalyzer.class)
@@ -32,7 +33,7 @@ public class MainTest {
     @BeforeEach
     void setUp() {
         circle = new Circle(2);
-        cylinder = new Cylinder(2,2);
+        cylinder = new  Cylinder(2,2);
         rectangle = new Rectangle(1,2);
         cuboid = new Cuboid(1, 2, 3);
         employee = new Employee(1, "Jane Doe", 20000);
@@ -42,33 +43,33 @@ public class MainTest {
         seniorDeveloper = new SeniorDeveloper(1, "Senior Doe", 100000);
     }
 
-    @DisplayName("Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
+    @DisplayName("com.workintech.cylinder.Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
     public void testCircleAccessModifiers() throws NoSuchFieldException {
         Field radiusField = circle.getClass().getDeclaredField("radius");
         assertEquals(radiusField.getModifiers(), 2);
     }
 
-    @DisplayName("Circle sınıf değişkenleri doğru type a sahip mi ?")
+    @DisplayName("com.workintech.cylinder.Circle sınıf değişkenleri doğru type a sahip mi ?")
     @Test
     public void testCircleTypes() throws NoSuchFieldException {
         assertThat(circle.getRadius(), instanceOf(Number.class));
     }
 
-    @DisplayName("getArea methodu Circle sınıfında doğru çalışıyor mu?")
+    @DisplayName("getArea methodu com.workintech.cylinder.Circle sınıfında doğru çalışıyor mu?")
     @Test
     public void testGetArea() throws NoSuchFieldException {
         assertTrue(String.format("%.2f", circle.getArea()).contains("12"));
     }
 
-    @DisplayName("Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
+    @DisplayName("com.workintech.cylinder.Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
     public void testCylinderAccessModifiers() throws NoSuchFieldException {
         Field heightField = cylinder.getClass().getDeclaredField("height");
         assertEquals(heightField.getModifiers(), 2);
     }
 
-    @DisplayName("Cylinder sınıfı ve değişkenleri doğru type a sahip mi ?")
+    @DisplayName("com.workintech.cylinder.Circle.com.workintech.cylinder.Cylinder sınıfı ve değişkenleri doğru type a sahip mi ?")
     @Test
     public void testCylinderTypes() throws NoSuchFieldException {
         assertThat(cylinder, instanceOf(Circle.class));
@@ -81,7 +82,7 @@ public class MainTest {
         assertTrue(String.format("%.2f", cylinder.getVolume()).contains("25"));
     }
 
-    @DisplayName("Rectangle sınıf değişkenleri doğru access modifier a sahip mi ?")
+    @DisplayName("com.workintech.pool.Rectangle sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
     public void testRectangleAccessModifiers() throws NoSuchFieldException {
         Field widthField = rectangle.getClass().getDeclaredField("width");
@@ -90,34 +91,34 @@ public class MainTest {
         assertEquals(lengthField.getModifiers(), 2);
     }
 
-    @DisplayName("Rectangle sınıf değişkenleri doğru type a sahip mi ?")
+    @DisplayName("com.workintech.pool.Rectangle sınıf değişkenleri doğru type a sahip mi ?")
     @Test
     public void testRectangleTypes() throws NoSuchFieldException {
         assertThat(rectangle.getWidth(), instanceOf(Number.class));
         assertThat(rectangle.getLength(), instanceOf(Number.class));
     }
 
-    @DisplayName("getArea methodu Rectangle sınıfında doğru çalışıyor mu?")
+    @DisplayName("getArea methodu com.workintech.pool.Rectangle sınıfında doğru çalışıyor mu?")
     @Test
     public void testGetAreaRectangle() throws NoSuchFieldException {
         assertEquals(String.format("%.2f", rectangle.getArea()), "2.00");
     }
 
-    @DisplayName("Cuboid sınıf değişkenleri doğru access modifier a sahip mi ?")
+    @DisplayName("com.workintech.pool.Cuboid sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
     public void testCuboidAccessModifiers() throws NoSuchFieldException {
         Field widthField = cuboid.getClass().getDeclaredField("height");
         assertEquals(widthField.getModifiers(), 2);
     }
 
-    @DisplayName("Cuboid sınıf değişkenleri doğru type a sahip mi ?")
+    @DisplayName("com.workintech.pool.Cuboid sınıf değişkenleri doğru type a sahip mi ?")
     @Test
     public void testCuboidTypes() throws NoSuchFieldException {
         assertThat(cuboid, instanceOf(Rectangle.class));
         assertThat(cuboid.getHeight(), instanceOf(Number.class));
     }
 
-    @DisplayName("getVolume methodu Cuboid sınıfında doğru çalışıyor mu?")
+    @DisplayName("getVolume methodu com.workintech.pool.Cuboid sınıfında doğru çalışıyor mu?")
     @Test
     public void testGetVolumeRectangle() throws NoSuchFieldException {
         assertEquals(String.format("%.2f", cuboid.getVolume()), "6.00");

@@ -9,31 +9,31 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
 ### Hedeflerimiz:
 
 ### Silindir
-* com.workintech.cylinder paketi altında Circle isimli bir sınıf yazınız. ```radius``` isimli bir tane sınıf değişkenine sahip olmalı. radius değişkeninin tipi ne olmalı ?
+* com.workintech.cylinder paketi altında com.workintech.cylinder.Circle isimli bir sınıf yazınız. ```radius``` isimli bir tane sınıf değişkenine sahip olmalı. radius değişkeninin tipi ne olmalı ?
 * Sınıfın bir tane ```constructor``` metodu olmalı ve içerisinde radius değişkeninin değerini değiştirebilmeli. Radius bir şekilde 0'dan küçük belirtilirse radius 0'a eşitlenmeli. 
-* Circle sınıfının ```getRadius``` isimli bir metodu olmalı ve radius değerinin dönmeli.
-* Circle sınıfının ```getArea``` isimli bir metodu olmalı ve radius * radius * Math.PI değerini dönmeli.
+* com.workintech.cylinder.Circle sınıfının ```getRadius``` isimli bir metodu olmalı ve radius değerinin dönmeli.
+* com.workintech.cylinder.Circle sınıfının ```getArea``` isimli bir metodu olmalı ve radius * radius * Math.PI değerini dönmeli.
 
-* com.workintech.cylinder paketi altında Cylinder isminde bir sınıf yazınız. Circle sınıfı ile arasında kalıtım ilişkisi kurmalısınız.
-* Cylinder sınıfının bir tane sınıf değişkeni olmalı ve adı ```height``` olmalı. height değişkeninin tipi ne olmalı ?
-* Cylinder sınıfının bir tane constructor methodu olmalı ve 2 parametre almalı. height parametresi 0'dan küçükse, height 0'a eşitlenmeli.
-* Cylinder sınıfının ```getHeight``` isimli bir metodu olmalı ve height değerini return etmeli.
-* Cylinder sınıfının ```getVolume``` isimli bir metodu olmalı hacmi hesaplamalı. Hacmi hesaplamak için ```getArea``` ile height değişkenini çarpmalı.
+* com.workintech.cylinder paketi altında com.workintech.cylinder.Circle.com.workintech.cylinder.Cylinder isminde bir sınıf yazınız. com.workintech.cylinder.Circle sınıfı ile arasında kalıtım ilişkisi kurmalısınız.
+* com.workintech.cylinder.Circle.com.workintech.cylinder.Cylinder sınıfının bir tane sınıf değişkeni olmalı ve adı ```height``` olmalı. height değişkeninin tipi ne olmalı ?
+* com.workintech.cylinder.Circle.com.workintech.cylinder.Cylinder sınıfının bir tane constructor methodu olmalı ve 2 parametre almalı. height parametresi 0'dan küçükse, height 0'a eşitlenmeli.
+* com.workintech.cylinder.Circle.com.workintech.cylinder.Cylinder sınıfının ```getHeight``` isimli bir metodu olmalı ve height değerini return etmeli.
+* com.workintech.cylinder.Circle.com.workintech.cylinder.Cylinder sınıfının ```getVolume``` isimli bir metodu olmalı hacmi hesaplamalı. Hacmi hesaplamak için ```getArea``` ile height değişkenini çarpmalı.
 
 ### Havuzun Alanını Hesaplama
 
   Workintech yüzme ekibinin sana ihtiyacı var.  
 
-* com.workintech.pool paketi altında Rectangle isimli bir sınıf yazınız. Sınıf'ın iki tane sınıf değişkeni olmalı. ```width``` ve ```length``` İki değişkeninde tipini ne seçmeliyiz?
+* com.workintech.pool paketi altında com.workintech.pool.Rectangle isimli bir sınıf yazınız. Sınıf'ın iki tane sınıf değişkeni olmalı. ```width``` ve ```length``` İki değişkeninde tipini ne seçmeliyiz?
 * width değişkeni de height değişkenide 0 dan küçük set edilirse direkt olarak 0'a set edilmeliler.
-* Rectangle sınıfının 3 methodu olmalı ```getWidth``` width alanını dönmeli.
+* com.workintech.pool.Rectangle sınıfının 3 methodu olmalı ```getWidth``` width alanını dönmeli.
 * ```getLength``` methodu length fieldini dönmeli
 * ```getArea``` methodu (width*length) i dönmeli.
 
-* com.workintech.pool paketi altında Cuboid isimli bir sınıf daha yazmalısınız. Cuboid sınıfı ile Rectangle sınıfı arasında bir ilişki olmalı.
-* Cuboid sınıfının tek bir sınıf değişkeni var ve adı height. Tipini belirlemek senin görevin. height 0'dan küçükse direkt 0 atanmalı.
-* Cuboid sınıfının tek bir constructor methodu olmalı ve 3 parametre almalı. width, length ve height.
-* Cuboid sınıfının iki tane methodu olmalı. ```getHeight``` height değerini dönmeli. ```getVolume``` volume değerinin hesaplamalı ve dönmeli. Volume alan ile yükseklik değerinin çarpımıdır.
+* com.workintech.pool paketi altında com.workintech.pool.Cuboid isimli bir sınıf daha yazmalısınız. com.workintech.pool.Cuboid sınıfı ile com.workintech.pool.Rectangle sınıfı arasında bir ilişki olmalı.
+* com.workintech.pool.Cuboid sınıfının tek bir sınıf değişkeni var ve adı height. Tipini belirlemek senin görevin. height 0'dan küçükse direkt 0 atanmalı.
+* com.workintech.pool.Cuboid sınıfının tek bir constructor methodu olmalı ve 3 parametre almalı. width, length ve height.
+* com.workintech.pool.Cuboid sınıfının iki tane methodu olmalı. ```getHeight``` height değerini dönmeli. ```getVolume``` volume değerinin hesaplamalı ve dönmeli. Volume alan ile yükseklik değerinin çarpımıdır.
 
 ### Developer Company
 * com.workintech.developers paketi altında Employee isimli bir sınıf oluşturunuz. İçerisinde ```id, name, salary``` sınıf değişkenleri olmalı.
@@ -57,13 +57,13 @@ Uygulamada ```main``` metodu içerisinde INPUT kısmındaki kod blokları çağ�
 ### Silindir için
 INPUT
 
-Circle circle = new Circle(3.75);
+com.workintech.cylinder.Circle circle = new com.workintech.cylinder.Circle(3.75);
 
 System.out.println("circle.radius= " + circle.getRadius());
 
 System.out.println("circle.area= " + circle.getArea());
 
-Cylinder cylinder = new Cylinder(5.55, 7.25);
+com.workintech.cylinder.Circle.com.workintech.cylinder.Cylinder cylinder = new com.workintech.cylinder.Circle.com.workintech.cylinder.Cylinder(5.55, 7.25);
 
 System.out.println("cylinder.radius= " + cylinder.getRadius());
 
@@ -91,7 +91,7 @@ cylinder.volume= 701.574580913447
 ### Havuzun Alanı için
 INPUT
 
-Rectangle rectangle = new Rectangle(5, 10);
+com.workintech.pool.Rectangle rectangle = new com.workintech.pool.Rectangle(5, 10);
 
 System.out.println("rectangle.width= " + rectangle.getWidth());
 
@@ -99,7 +99,7 @@ System.out.println("rectangle.length= " + rectangle.getLength());
 
 System.out.println("rectangle.area= " + rectangle.getArea());
 
-Cuboid cuboid = new Cuboid(5,10,5);
+com.workintech.pool.Cuboid cuboid = new com.workintech.pool.Cuboid(5,10,5);
 
 System.out.println("cuboid.width= " + cuboid.getWidth());
 
